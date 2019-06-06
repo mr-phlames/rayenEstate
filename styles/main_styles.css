@@ -117,7 +117,7 @@ p a:hover::after
 }
 ::selection
 {
-	background: #233399;
+	background: #007bff;
 	color: #ffffff;
 }
 p::selection
@@ -376,7 +376,7 @@ section
 	width: 32px;
 	height: 32px;
 	border-radius: 50%;
-	background: #233399;
+	background: #007bff;
 	text-align: center;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -440,7 +440,7 @@ section
 }
 .log_reg ul li a:hover
 {
-	color: #233399;
+	color: #007bff;
 }
 .header_content
 {
@@ -490,7 +490,7 @@ section
 .main_nav ul li.active,
 .main_nav ul li:hover
 {
-	background: #233399;
+	background: #007bff;
 }
 .main_nav ul li a
 {
@@ -514,7 +514,7 @@ section
 .submit
 {
 	width: 247px;
-	background: #233399;
+	background: #007bff;
 	height: 100%;
 	text-align: center;
 }
@@ -545,7 +545,7 @@ section
 }
 .hamburger:hover i
 {
-	color: #233399;
+	color: #007bff;
 }
 
 /*********************************
@@ -593,7 +593,7 @@ section
 }
 .menu_close:hover i
 {
-	color: #233399;
+	color: #007bff;
 }
 .menu_log_reg
 {
@@ -610,7 +610,7 @@ section
 }
 .menu .log_reg ul li a:hover
 {
-	color: #233399;
+	color: #007bff;
 }
 .menu .log_reg ul li:not(:last-of-type)::after
 {
@@ -633,7 +633,7 @@ section
 }
 .menu_nav ul li a:hover
 {
-	color: #233399;
+	color: #007bff;
 }
 
 /*********************************
@@ -696,7 +696,7 @@ section
 	width: 57px;
 	height: 57px;
 	border-radius: 50%;
-	background: #233399;
+	background: #007bff;
 	text-align: center;
 	cursor: pointer;
 	-webkit-transition: all 200ms ease;
@@ -733,7 +733,7 @@ section
 {
 	display: inline-block;
 	height: 70px;
-	background: #233399;
+	background: #007bff;
 	opacity: 0.8;
 	font-size: 48px;
 	font-weight: 500;
@@ -759,7 +759,7 @@ section
 {
 	width: 247px;
 	height: 51px;
-	background: #233399;
+	background: #007bff;
 	color: #ffffff;
 	border: none;
 	outline: none;
@@ -898,7 +898,7 @@ section
 }
 .tag_house
 {
-	background: #233399;
+	background: #007bff;
 }
 .tag_sale
 {
@@ -950,7 +950,7 @@ section
 }
 .listing_location a:hover
 {
-	color: #233399;
+	color: #007bff;
 }
 .listing_info
 {
@@ -1088,7 +1088,7 @@ section
 	left: 0;
 	width: 14px;
 	height: 14px;
-	border: solid 2px #233399;
+	border: solid 2px #007bff;
 	border-radius: 50%;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -1098,11 +1098,11 @@ section
 }
 .location_contaner > input:checked ~ span
 {
-	background: #233399;
+	background: #007bff;
 }
 .location_contaner > input:not(:checked):hover ~ span
 {
-	background: #233399;
+	background: #007bff;
 	opacity: 0.5;
 }
 
@@ -1156,7 +1156,7 @@ section
 }
 .hot_title a:hover
 {
-	color: #233399;
+	color: #007bff;
 }
 .prop_location
 {
@@ -1199,7 +1199,7 @@ section
 {
 	font-size: 14px;
 	font-weight: 600;
-	color: #233399;
+	color: #007bff;
 }
 .prop_info
 {
@@ -1310,7 +1310,7 @@ section
 }
 .test_author a:hover
 {
-	color: #233399;
+	color: #007bff;
 }
 .owl-theme .owl-dots
 {
@@ -1340,7 +1340,7 @@ section
 }
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
 {
-	background: #233399;
+	background: #007bff;
 }
 
 /*********************************
@@ -1396,7 +1396,7 @@ section
 }
 .footer_submit:hover
 {
-	background: #233399;
+	background: #007bff;
 }
 .footer_submit a
 {
@@ -1463,7 +1463,7 @@ section
 }
 .footer_links ul li a:hover
 {
-	color: #233399;
+	color: #007bff;
 }
 .listing_small
 {
@@ -1525,7 +1525,7 @@ section
 }
 .tag_house
 {
-	background: #233399;
+	background: #007bff;
 }
 .tag_sale
 {
@@ -1574,7 +1574,7 @@ section
 }
 .listing_small_location a:hover
 {
-	color: #233399;
+	color: #007bff;
 }
 .listing_small_info
 {
@@ -1626,5 +1626,5 @@ section
 }
 .footer_nav ul li a:hover
 {
-	color: #233399;
+	color: #007bff;
 }

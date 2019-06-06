@@ -116,13 +116,13 @@ p a:hover::after
 }
 ::selection
 {
-	background: #adc867;
+	background: #007bff;
 	color: #ffffff;
 }
-p::selection
+/* p::selection
 {
 	
-}
+} */
 h1{font-size: 48px;}
 h2{font-size: 36px;}
 h3{font-size: 24px;}
@@ -139,7 +139,7 @@ h1, h2, h3, h4, h5, h6
 	font-weight: 600;
 	margin-bottom: 0;
 }
-h1::selection, 
+/* h1::selection, 
 h2::selection, 
 h3::selection, 
 h4::selection, 
@@ -147,7 +147,7 @@ h5::selection,
 h6::selection
 {
 	
-}
+} */
 img
 {
 	max-width: 100%;
@@ -322,7 +322,7 @@ section
 {
 	width: 247px;
 	height: 61px;
-	background: #adc867;
+	background: #007bff;
 	text-align: center;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -403,7 +403,7 @@ section
 	width: 32px;
 	height: 32px;
 	border-radius: 50%;
-	background: #adc867;
+	background: #007bff;
 	text-align: center;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -467,7 +467,7 @@ section
 }
 .log_reg ul li a:hover
 {
-	color: #adc867;
+	color: #007bff;
 }
 .header_content
 {
@@ -517,7 +517,7 @@ section
 .main_nav ul li.active,
 .main_nav ul li:hover
 {
-	background: #adc867;
+	background: #007bff;
 }
 .main_nav ul li a
 {
@@ -541,7 +541,7 @@ section
 .submit
 {
 	width: 247px;
-	background: #adc867;
+	background: #007bff;
 	height: 100%;
 	text-align: center;
 }
@@ -572,7 +572,7 @@ section
 }
 .hamburger:hover i
 {
-	color: #adc867;
+	color: #007bff;
 }
 
 /*********************************
@@ -620,7 +620,7 @@ section
 }
 .menu_close:hover i
 {
-	color: #adc867;
+	color: #007bff;
 }
 .menu_log_reg
 {
@@ -637,7 +637,7 @@ section
 }
 .menu .log_reg ul li a:hover
 {
-	color: #adc867;
+	color: #007bff;
 }
 .menu .log_reg ul li:not(:last-of-type)::after
 {
@@ -660,7 +660,7 @@ section
 }
 .menu_nav ul li a:hover
 {
-	color: #adc867;
+	color: #007bff;
 }
 
 /*********************************
@@ -746,7 +746,7 @@ section
 	width: 100%;
 	height: 100%;
 	content: '';
-	border: solid 2px #adc867;
+	border: solid 2px #007bff;
 	visibility: hidden;
 	opacity: 0;
 	pointer-events: none;
@@ -804,7 +804,7 @@ section
 }
 .milestone_icon svg
 {
-	max-width: 100%	
+	max-width: 100%;
 	max-height: 100%;
 }
 .milestone_counter
@@ -853,10 +853,10 @@ section
 	padding-right: 40px;
 	padding-bottom: 22px;
 }
-.agent_name
+/* .agent_name
 {
 
-}
+} */
 .agent_name a
 {
 	font-size: 24px;
@@ -865,13 +865,13 @@ section
 }
 .agent_name a:hover
 {
-	color: #adc867;
+	color: #007bff;
 }
 .agent_title
 {
 	font-size: 14px;
 	font-weight: 500;
-	color: #adc867;
+	color: #007bff;
 	margin-top: 0px;
 }
 .agent_list
@@ -899,7 +899,7 @@ section
 }
 .agent .social ul li:hover
 {
-	background: #adc867;
+	background: #007bff;
 	transform: none;
 	box-shadow: none;
 }
@@ -961,7 +961,7 @@ section
 }
 .footer_submit:hover
 {
-	background: #adc867;
+	background: #007bff;
 }
 .footer_submit a
 {
@@ -1028,7 +1028,7 @@ section
 }
 .footer_links ul li a:hover
 {
-	color: #adc867;
+	color: #007bff;
 }
 .listing_small
 {
@@ -1090,7 +1090,7 @@ section
 }
 .tag_house
 {
-	background: #adc867;
+	background: #007bff;
 }
 .tag_sale
 {
@@ -1139,7 +1139,7 @@ section
 }
 .listing_small_location a:hover
 {
-	color: #adc867;
+	color: #007bff;
 }
 .listing_small_info
 {
@@ -1191,5 +1191,5 @@ section
 }
 .footer_nav ul li a:hover
 {
-	color: #adc867;
+	color: #007bff;
 }

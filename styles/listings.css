@@ -114,7 +114,7 @@ p a:hover::after
 }
 ::selection
 {
-	background: #adc867;
+	background: #007bff;
 	color: #ffffff;
 }
 p::selection
@@ -320,7 +320,7 @@ section
 {
 	width: 247px;
 	height: 61px;
-	background: #adc867;
+	background: #007bff;
 	text-align: center;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -401,7 +401,7 @@ section
 	width: 32px;
 	height: 32px;
 	border-radius: 50%;
-	background: #adc867;
+	background: #007bff;
 	text-align: center;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -465,7 +465,7 @@ section
 }
 .log_reg ul li a:hover
 {
-	color: #adc867;
+	color: #007bff;
 }
 .header_content
 {
@@ -515,7 +515,7 @@ section
 .main_nav ul li.active,
 .main_nav ul li:hover
 {
-	background: #adc867;
+	background: #007bff;
 }
 .main_nav ul li a
 {
@@ -539,7 +539,7 @@ section
 .submit
 {
 	width: 247px;
-	background: #adc867;
+	background: #007bff;
 	height: 100%;
 	text-align: center;
 }
@@ -570,7 +570,7 @@ section
 }
 .hamburger:hover i
 {
-	color: #adc867;
+	color: #007bff;
 }
 
 /*********************************
@@ -618,7 +618,7 @@ section
 }
 .menu_close:hover i
 {
-	color: #adc867;
+	color: #007bff;
 }
 .menu_log_reg
 {
@@ -635,7 +635,7 @@ section
 }
 .menu .log_reg ul li a:hover
 {
-	color: #adc867;
+	color: #007bff;
 }
 .menu .log_reg ul li:not(:last-of-type)::after
 {
@@ -658,7 +658,7 @@ section
 }
 .menu_nav ul li a:hover
 {
-	color: #adc867;
+	color: #007bff;
 }
 
 /*********************************
@@ -707,7 +707,7 @@ section
 {
 	width: 247px;
 	height: 51px;
-	background: #adc867;
+	background: #007bff;
 	color: #ffffff;
 	border: none;
 	outline: none;
@@ -799,7 +799,7 @@ section
 }
 .search_button_2
 {
-	background: #adc867;
+	background: #007bff;
 }
 
 /*********************************
@@ -841,7 +841,7 @@ section
 }
 .listing_tags ul li:hover
 {
-	background: #adc867;
+	background: #007bff;
 }
 .listing_tags ul li:hover a
 {
@@ -939,7 +939,7 @@ section
 }
 .sort ul li:hover
 {
-	color: #adc867;
+	color: #007bff;
 }
 .listings_container
 {
@@ -1015,7 +1015,7 @@ section
 }
 .tag_house
 {
-	background: #adc867;
+	background: #007bff;
 }
 .tag_sale
 {
@@ -1067,7 +1067,7 @@ section
 }
 .listing_location a:hover
 {
-	color: #adc867;
+	color: #007bff;
 }
 .listing_info
 {
@@ -1151,7 +1151,7 @@ section
 }
 .footer_submit:hover
 {
-	background: #adc867;
+	background: #007bff;
 }
 .footer_submit a
 {
@@ -1218,7 +1218,7 @@ section
 }
 .footer_links ul li a:hover
 {
-	color: #adc867;
+	color: #007bff;
 }
 .listing_small
 {
@@ -1280,7 +1280,7 @@ section
 }
 .tag_house
 {
-	background: #adc867;
+	background: #007bff;
 }
 .tag_sale
 {
@@ -1329,7 +1329,7 @@ section
 }
 .listing_small_location a:hover
 {
-	color: #adc867;
+	color: #007bff;
 }
 .listing_small_info
 {
@@ -1381,5 +1381,5 @@ section
 }
 .footer_nav ul li a:hover
 {
-	color: #adc867;
+	color: #007bff;
 }
