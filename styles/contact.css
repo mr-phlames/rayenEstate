@@ -35,6 +35,14 @@
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
+.contact-form-error {
+	/* margin-top: -30px !important; */
+	text-align: left !important;
+	align-self: flex-start !important;
+	box-align: left !important;
+	margin-left: -50px !important;
+}
+
 body
 {
 	font-family: 'Montserrat', sans-serif;

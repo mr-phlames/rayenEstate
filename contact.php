@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+	require('php/contact.php'); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="styles/contact.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
 <link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
 </head>
 <body>
@@ -57,15 +62,29 @@
 			<div style="flex: 1;"></div>
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-start justify-content-start">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li ><a href="about.html">About us</a></li>
 					<li><a href="listings.html">Listings</a></li>
-					<li><a href="blog.html">News</a></li>
-					<li class="active"><a href="contact.html">Contact</a></li>
+					<li class="active"><a href="contact.php">Contact</a></li>
 				</ul>
 			</nav>
-			<div class="ml-auto"><a href="auth/register.html" style="margin: 0px 40px;">SIGN UP</a></div>
-			<div class="submit ml-auto"><a href="auth/login.html">LOGIN</a></div>
+			<?php 
+				if (isset($_SESSION['id'])) {
+					echo '<div class="ml-auto">
+						<a href="profile.php" style="margin: 0px 40px; display: flex; justify-content: flex-start; align-items: center;" class="nav-profile-link-text">
+							<img src="images/realtor_2.jpg" class="nav-profile-image">
+							'.$_SESSION["username"].'
+						</a>
+					</div>';
+				}  else {
+					echo '
+						<div class="ml-auto">
+							<a href="auth/register.php" style="margin: 0px 40px;">SIGN UP</a>
+						</div>
+						<div class="submit ml-auto"><a href="auth/login.php">LOGIN</a></div>
+					';
+				}
+			?>
 			<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
 		</div>
 	
@@ -76,20 +95,29 @@
 	<div class="menu text-right">
 		<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
 		<div class="menu_log_reg">
-			<div class="log_reg d-flex flex-row align-items-center justify-content-end">
-				<ul class="d-flex flex-row align-items-start justify-content-start">
-					<li><a href="#">Login</a></li>
-					<li><a href="#">Register</a></li>
-				</ul>
-			</div>
 			<nav class="menu_nav">
+                <ul>
+					<?php 
+					echo isset($_SESSION['id']) ? '
+					<li>
+                        <a href="profile.php" style="margin-bottom: 50px; display: flex; justify-content: flex-end; align-items: center;">
+                            <img src="images/realtor_2.jpg" class="nav-profile-image">
+                            <span>'.$_SESSION["username"].'</span>
+                        </a>
+					</li>' : '';
+					?>
+                </ul>
 				<ul>
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><a href="about.html">About us</a></li>
 					<li><a href="listings.html">Listings</a></li>
-					<li><a href="blog.html">News</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
+					<li><a href="contact.php">Contact</a></li>
+                </ul>
+                <br>
+                <br>
+                <ul>
+                    <li><a href="php/logout.php">Logout</a></li>
+                </ul>
 			</nav>
 		</div>
 	</div>
@@ -167,20 +195,26 @@
 			<div class="row contact_form_row">
 				<div class="col">
 					<div class="contact_form_container">
-						<form action="#" class="contact_form text-center" id="contact_form">
+						<form action="contact.php" method="post" class="contact_form text-center" id="contact_form">
 							<div class="row">
 								<div class="col-lg-4">
-									<input type="text" class="contact_input" placeholder="Your name" required="required">
+									<input type="text" class="contact_input" placeholder="Your name" name="name" value="<?php echo isset($_SESSION['id']) ? $_SESSION['username'] : ($errors['name'] || $errors['email'] || $errors['title'] || $errors['body']) ? $name : '' ?>">
+									<div class="contact-form-error"><?php echo $errors['name'] ?></div>
 								</div>
 								<div class="col-lg-4">
-									<input type="email" class="contact_input" placeholder="Your e-mail" required="required">
+									<input type="email" class="contact_input" placeholder="Your e-mail" name="email" value="<?php echo isset($_SESSION['id']) ? $_SESSION['email'] : ($errors['name'] || $errors['email'] || $errors['title'] || $errors['body']) ? $email : '' ?>">
+									<div class="contact-form-error"><?php echo $errors['email'] ?></div>
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="contact_input" placeholder="Subject" required="required">
+									<input type="text" class="contact_input" placeholder="Subject" name="title" value="<?php echo ($errors['name'] || $errors['email'] || $errors['title'] || $errors['body']) ? $title : '' ?>">
+									<div class="contact-form-error"><?php echo $errors['title'] ?></div>
 								</div>
 							</div>
-							<textarea class="contact_textarea contact_input" placeholder="Message" required="required"></textarea>
-							<button class="contact_button">send message</button>
+							<br>
+							<div class="contact-form-error"><?php echo $errors['body'] ?></div>
+							<textarea class="contact_textarea contact_input" placeholder="Message" name="body" value="<?php echo ($errors['name'] || $errors['email'] || $errors['title'] || $errors['body']) ? $body : '' ?>"></textarea>
+							<br>
+							<button class="contact_button" name="contact_btn">send message</button>
 						</form>
 					</div>
 				</div>
@@ -334,21 +368,17 @@
 						<div
 							class="footer_bar_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
 							<div class="copyright order-md-1 order-2">
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 								Copyright &copy;
-								<script>document.write(new Date().getFullYear());</script> All rights reserved | This
-								template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-									href="https://colorlib.com" target="_blank">Colorlib</a>
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+									href="https://Michael Darko-Duodu.com" target="_blank">Michael Darko-Duodu</a>
 							</div>
 							<nav class="footer_nav order-md-2 order-1 ml-md-auto">
 								<ul
 									class="d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
-									<li><a href="index.html">Home</a></li>
+									<li><a href="index.php">Home</a></li>
 									<li><a href="about.html">About us</a></li>
 									<li><a href="listings.html">Listings</a></li>
-									<li><a href="blog.html">News</a></li>
-									<li><a href="contact.html">Contact</a></li>
+									<li><a href="contact.php">Contact</a></li>
 								</ul>
 							</nav>
 						</div>

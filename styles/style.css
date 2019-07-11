@@ -1,0 +1,12 @@
+.nav-profile-image {
+	width: 40px !important;
+	height: 40px !important;
+    border-radius: 50% !important;
+    margin-right: 7px !important;
+}
+
+.nav-profile-link-text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+    font-size: 22px !important;
+    color: black !important;
+}

@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    require('php/register.php');
+    if (!isset($_SESSION['id'])) {
+        header('location: auth/login.php');
+    }  
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +20,7 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/animate.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
 
@@ -28,15 +36,18 @@
 			<div style="flex: 1;"></div>
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-start justify-content-start">
-					<li class="active"><a href="index.html">Home</a></li>
+					<li class="active"><a href="index.php">Home</a></li>
 					<li><a href="about.html">About us</a></li>
 					<li><a href="listings.html">Listings</a></li>
-					<li><a href="blog.html">News</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="contact.php">Contact</a></li>
 				</ul>
 			</nav>
-			<div class="ml-auto"><a href="auth/register.html" style="margin: 0px 40px;">SIGN UP</a></div>
-			<div class="submit ml-auto"><a href="auth/login.html">LOGIN</a></div>
+			<div class="ml-auto">
+                <a href="profile.php" style="margin: 0px 40px; display: flex; justify-content: flex-start; align-items: center;" class="nav-profile-link-text">
+                    <img src="images/realtor_2.jpg" class="nav-profile-image">
+                    <?php echo $_SESSION['username']; ?>
+                </a>
+            </div>
 			<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
 		</div>
 
@@ -47,20 +58,26 @@
 	<div class="menu text-right">
 		<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
 		<div class="menu_log_reg">
-			<div class="log_reg d-flex flex-row align-items-center justify-content-end">
-				<ul class="d-flex flex-row align-items-start justify-content-start">
-					<li><a href="#">Login</a></li>
-					<li><a href="#">Register</a></li>
-				</ul>
-			</div>
 			<nav class="menu_nav">
+                <ul>
+                    <li>
+                        <a href="profile.php" style="margin-bottom: 50px; display: flex; justify-content: flex-end; align-items: center;">
+                            <img src="images/realtor_2.jpg" class="nav-profile-image">
+                            <span><?php echo $_SESSION['username']; ?></span>
+                        </a>
+                    </li>
+                </ul>
 				<ul>
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><a href="about.html">About us</a></li>
 					<li><a href="listings.html">Listings</a></li>
-					<li><a href="blog.html">News</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
+					<li><a href="contact.php">Contact</a></li>
+                </ul>
+                <br>
+                <br>
+                <ul>
+                    <li><a href="php/logout.php">Logout</a></li>
+                </ul>
 			</nav>
 		</div>
 	</div>
@@ -80,9 +97,9 @@
 			 			<div class="container">
 			 				<div class="row">
 			 					<div class="col">
-			 						<div class="home_content">
+			 						<div class="home_content" style="text-align: left !important;">
 			 							<div class="home_title"><h1>Rayen Real Estate</h1></div>
-			 							<div class="home_price_tag">We're here to help you buy, sell and rent</div>
+			 							<div class="home_title"><h4 style="color: white;">We're here to help you buy, sell and rent</h4></div>
 			 						</div>
 			 					</div>
 			 				</div>
@@ -99,7 +116,9 @@
 			 					<div class="col">
 			 						<div class="home_content">
 			 							<div class="home_title"><h1>Discover</h1></div>
-			 							<div class="home_price_tag">a place you'll love to live or a land you'll love to buy.</div>
+										<div class="home_title">
+											<h4 style="color: white;">a place you'll love to live or a land you'll love to buy.</h4>
+										</div>
 			 						</div>
 			 					</div>
 			 				</div>
@@ -637,21 +656,19 @@
 						<div
 							class="footer_bar_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
 							<div class="copyright order-md-1 order-2">
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								<!-- Link back to Michael Darko-Duodu can't be removed. Template is licensed under CC BY 3.0. -->
 								Copyright &copy;
-								<script>document.write(new Date().getFullYear());</script> All rights reserved | This
-								template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-									href="https://colorlib.com" target="_blank">Colorlib</a>
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+									href="https://Michael Darko-Duodu.com" target="_blank">Michael Darko-Duodu</a>
+								<!-- Link back to Michael Darko-Duodu can't be removed. Template is licensed under CC BY 3.0. -->
 							</div>
 							<nav class="footer_nav order-md-2 order-1 ml-md-auto">
 								<ul
 									class="d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
-									<li><a href="index.html">Home</a></li>
+									<li><a href="index.php">Home</a></li>
 									<li><a href="about.html">About us</a></li>
 									<li><a href="listings.html">Listings</a></li>
-									<li><a href="blog.html">News</a></li>
-									<li><a href="contact.html">Contact</a></li>
+									<li><a href="contact.php">Contact</a></li>
 								</ul>
 							</nav>
 						</div>
