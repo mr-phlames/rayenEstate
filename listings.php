@@ -32,7 +32,7 @@
 					<!-- Phone -->
 					<li class="d-flex flex-row align-items-center justify-content-start">
 						<div><img src="images/phone-call.svg" alt=""></div>
-						<span>telephone</span>
+						<span>0207984983</span>
 					</li>
 					<!-- Address -->
 					<li class="d-flex flex-row align-items-center justify-content-start">
@@ -42,7 +42,7 @@
 					<!-- Email -->
 					<li class="d-flex flex-row align-items-center justify-content-start">
 						<div><img src="images/envelope.svg" alt=""></div>
-						<span>email@contact.com</span>
+						<span>rayenrealestate@gmail.com</span>
 					</li>
 				</ul>
 			</div>
@@ -629,7 +629,7 @@
 									<!-- Phone -->
 									<li class="d-flex flex-row align-items-center justify-content-start">
 										<div><img src="images/phone-call.svg" alt=""></div>
-										<span>mobile</span>
+										<span>0207984983</span>
 									</li>
 									<!-- Address -->
 									<li class="d-flex flex-row align-items-center justify-content-start">
@@ -639,7 +639,7 @@
 									<!-- Email -->
 									<li class="d-flex flex-row align-items-center justify-content-start">
 										<div><img src="images/envelope.svg" alt=""></div>
-										<span>email@contact.com</span>
+										<span>rayenrealestate@gmail.com</span>
 									</li>
 								</ul>
 							</div>
