@@ -1,3 +1,6 @@
+<?php 
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +16,7 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/animate.css">
 <link rel="stylesheet" type="text/css" href="styles/listings.css">
 <link rel="stylesheet" type="text/css" href="styles/listings_responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
 
@@ -61,13 +65,28 @@
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-start justify-content-start">
 					<li><a href="index.php">Home</a></li>
-					<li><a href="about.html">About us</a></li>
-					<li class="active"><a href="listings.html">Listings</a></li>
+					<li><a href="about.php">About us</a></li>
+					<li class="active"><a href="listings.php">Listings</a></li>
 					<li><a href="contact.php">Contact</a></li>
 				</ul>
 			</nav>
-			<div class="ml-auto"><a href="auth/register.php" style="margin: 0px 40px;">SIGN UP</a></div>
-			<div class="submit ml-auto"><a href="auth/login.php">LOGIN</a></div>
+			<?php 
+				if (isset($_SESSION['id'])) {
+					echo '<div class="ml-auto">
+						<a href="profile.php" style="margin: 0px 40px; display: flex; justify-content: flex-start; align-items: center;" class="nav-profile-link-text">
+							<img src="images/realtor_2.jpg" class="nav-profile-image">
+							'.$_SESSION["username"].'
+						</a>
+					</div>';
+				}  else {
+					echo '
+						<div class="ml-auto">
+							<a href="auth/register.php" style="margin: 0px 40px;">SIGN UP</a>
+						</div>
+						<div class="submit ml-auto"><a href="auth/login.php">LOGIN</a></div>
+					';
+				}
+			?>
 			<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
 		</div>
 
@@ -78,18 +97,29 @@
 	<div class="menu text-right">
 		<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
 		<div class="menu_log_reg">
-			<div class="log_reg d-flex flex-row align-items-center justify-content-end">
-				<ul class="d-flex flex-row align-items-start justify-content-start">
-					<li><a href="#">Login</a></li>
-				</ul>
-			</div>
 			<nav class="menu_nav">
+                <ul>
+					<?php 
+					echo isset($_SESSION['id']) ? '
+					<li>
+                        <a href="profile.php" style="margin-bottom: 50px; display: flex; justify-content: flex-end; align-items: center;">
+                            <img src="images/realtor_2.jpg" class="nav-profile-image">
+                            <span>'.$_SESSION["username"].'</span>
+                        </a>
+					</li>' : '';
+					?>
+                </ul>
 				<ul>
 					<li><a href="index.php">Home</a></li>
-					<li><a href="about.html">About us</a></li>
-					<li><a href="listings.html">Listings</a></li>
+					<li><a href="about.php">About us</a></li>
+					<li><a href="listings.php">Listings</a></li>
 					<li><a href="contact.php">Contact</a></li>
-				</ul>
+                </ul>
+                <br>
+                <br>
+                <ul>
+                    <li><a href="php/logout.php">Logout</a></li>
+                </ul>
 			</nav>
 		</div>
 	</div>
@@ -186,8 +216,8 @@
 										<img src="images/listing_1.jpg" alt="">
 									</div>
 									<div class="tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-										<div class="tag tag_house"><a href="listings.html">house</a></div>
-										<div class="tag tag_sale"><a href="listings.html">for sale</a></div>
+										<div class="tag tag_house"><a href="listings.php">house</a></div>
+										<div class="tag tag_sale"><a href="listings.php">for sale</a></div>
 									</div>
 									<div class="tag_price listing_price">$ 217 346</div>
 								</div>
@@ -228,8 +258,8 @@
 										<img src="images/listing_2.jpg" alt="">
 									</div>
 									<div class="tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-										<div class="tag tag_house"><a href="listings.html">house</a></div>
-										<div class="tag tag_rent"><a href="listings.html">for rent</a></div>
+										<div class="tag tag_house"><a href="listings.php">house</a></div>
+										<div class="tag tag_rent"><a href="listings.php">for rent</a></div>
 									</div>
 									<div class="tag_price listing_price">$ 515 957</div>
 								</div>
@@ -270,8 +300,8 @@
 										<img src="images/listing_3.jpg" alt="">
 									</div>
 									<div class="tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-										<div class="tag tag_house"><a href="listings.html">house</a></div>
-										<div class="tag tag_sale"><a href="listings.html">for sale</a></div>
+										<div class="tag tag_house"><a href="listings.php">house</a></div>
+										<div class="tag tag_sale"><a href="listings.php">for sale</a></div>
 									</div>
 									<div class="tag_price listing_price">$ 375 255</div>
 								</div>
@@ -312,8 +342,8 @@
 										<img src="images/listing_4.jpg" alt="">
 									</div>
 									<div class="tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-										<div class="tag tag_house"><a href="listings.html">house</a></div>
-										<div class="tag tag_rent"><a href="listings.html">for rent</a></div>
+										<div class="tag tag_house"><a href="listings.php">house</a></div>
+										<div class="tag tag_rent"><a href="listings.php">for rent</a></div>
 									</div>
 									<div class="tag_price listing_price">$ 122 350</div>
 								</div>
@@ -354,8 +384,8 @@
 										<img src="images/listing_5.jpg" alt="">
 									</div>
 									<div class="tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-										<div class="tag tag_house"><a href="listings.html">house</a></div>
-										<div class="tag tag_rent"><a href="listings.html">for rent</a></div>
+										<div class="tag tag_house"><a href="listings.php">house</a></div>
+										<div class="tag tag_rent"><a href="listings.php">for rent</a></div>
 									</div>
 									<div class="tag_price listing_price">$ 59 251</div>
 								</div>
@@ -396,8 +426,8 @@
 										<img src="images/listing_6.jpg" alt="">
 									</div>
 									<div class="tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-										<div class="tag tag_house"><a href="listings.html">house</a></div>
-										<div class="tag tag_sale"><a href="listings.html">for sale</a></div>
+										<div class="tag tag_house"><a href="listings.php">house</a></div>
+										<div class="tag tag_sale"><a href="listings.php">for sale</a></div>
 									</div>
 									<div class="tag_price listing_price">$ 715 114</div>
 								</div>
@@ -438,8 +468,8 @@
 										<img src="images/listing_7.jpg" alt="">
 									</div>
 									<div class="tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-										<div class="tag tag_house"><a href="listings.html">house</a></div>
-										<div class="tag tag_sale"><a href="listings.html">for sale</a></div>
+										<div class="tag tag_house"><a href="listings.php">house</a></div>
+										<div class="tag tag_sale"><a href="listings.php">for sale</a></div>
 									</div>
 									<div class="tag_price listing_price">$ 325 520</div>
 								</div>
@@ -480,8 +510,8 @@
 										<img src="images/listing_8.jpg" alt="">
 									</div>
 									<div class="tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-										<div class="tag tag_house"><a href="listings.html">house</a></div>
-										<div class="tag tag_sale"><a href="listings.html">for sale</a></div>
+										<div class="tag tag_house"><a href="listings.php">house</a></div>
+										<div class="tag tag_sale"><a href="listings.php">for sale</a></div>
 									</div>
 									<div class="tag_price listing_price">$ 154 487</div>
 								</div>
@@ -522,8 +552,8 @@
 										<img src="images/listing_9.jpg" alt="">
 									</div>
 									<div class="tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-										<div class="tag tag_house"><a href="listings.html">house</a></div>
-										<div class="tag tag_rent"><a href="listings.html">for rent</a></div>
+										<div class="tag tag_house"><a href="listings.php">house</a></div>
+										<div class="tag tag_rent"><a href="listings.php">for rent</a></div>
 									</div>
 									<div class="tag_price listing_price">$ 95 085</div>
 								</div>
@@ -657,8 +687,8 @@
 								</div>
 								<div
 									class="listing_small_tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-									<div class="listing_small_tag tag_house"><a href="listings.html">house</a></div>
-									<div class="listing_small_tag tag_sale"><a href="listings.html">for sale</a></div>
+									<div class="listing_small_tag tag_house"><a href="listings.php">house</a></div>
+									<div class="listing_small_tag tag_sale"><a href="listings.php">for sale</a></div>
 								</div>
 								<div class="listing_small_price">GH¢ 562 346</div>
 							</div>
@@ -707,8 +737,8 @@
 								<ul
 									class="d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
 									<li><a href="index.php">Home</a></li>
-									<li><a href="about.html">About us</a></li>
-									<li><a href="listings.html">Listings</a></li>
+									<li><a href="about.php">About us</a></li>
+									<li><a href="listings.php">Listings</a></li>
 									<li><a href="contact.php">Contact</a></li>
 								</ul>
 							</nav>

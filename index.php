@@ -35,8 +35,8 @@
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-start justify-content-start">
 					<li class="active"><a href="index.php">Home</a></li>
-					<li><a href="about.html">About us</a></li>
-					<li><a href="listings.html">Listings</a></li>
+					<li><a href="about.php">About us</a></li>
+					<li><a href="listings.php">Listings</a></li>
 					<li><a href="contact.php">Contact</a></li>
 				</ul>
 			</nav>
@@ -54,14 +54,14 @@
 		<div class="menu_log_reg">
 			<div class="log_reg d-flex flex-row align-items-center justify-content-end">
 				<ul class="d-flex flex-row align-items-start justify-content-start">
-					<li><a href="#">Login</a></li>
+					<li><a href="auth/login.php">Login</a></li>
 				</ul>
 			</div>
 			<nav class="menu_nav">
 				<ul>
 					<li><a href="index.php">Home</a></li>
-					<li><a href="about.html">About us</a></li>
-					<li><a href="listings.html">Listings</a></li>
+					<li><a href="about.php">About us</a></li>
+					<li><a href="listings.php">Listings</a></li>
 					<li><a href="contact.php">Contact</a></li>
 				</ul>
 			</nav>
@@ -168,8 +168,8 @@
 								<img src="images/listing_1.jpg" alt="">
 							</div>
 							<div class="tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-								<div class="tag tag_house"><a href="listings.html">English</a></div>
-								<div class="tag tag_sale"><a href="listings.html">for sale</a></div>
+								<div class="tag tag_house"><a href="listings.php">English</a></div>
+								<div class="tag tag_sale"><a href="listings.php">for sale</a></div>
 							</div>
 							<div class="tag_price listing_price">GH¢ 217 346</div>
 						</div>
@@ -210,8 +210,8 @@
 								<img src="images/listing_2.jpg" alt="">
 							</div>
 							<div class="tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-								<div class="tag tag_house"><a href="listings.html">Modern</a></div>
-								<div class="tag tag_rent"><a href="listings.html">for rent</a></div>
+								<div class="tag tag_house"><a href="listings.php">Modern</a></div>
+								<div class="tag tag_rent"><a href="listings.php">for rent</a></div>
 							</div>
 							<div class="tag_price listing_price">GH¢ 515 957</div>
 						</div>
@@ -252,8 +252,8 @@
 								<img src="images/listing_3.jpg" alt="">
 							</div>
 							<div class="tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-								<div class="tag tag_house"><a href="listings.html">Mansion</a></div>
-								<div class="tag tag_sale"><a href="listings.html">for sale</a></div>
+								<div class="tag tag_house"><a href="listings.php">Mansion</a></div>
+								<div class="tag tag_sale"><a href="listings.php">for sale</a></div>
 							</div>
 							<div class="tag_price listing_price">GH¢ 375 255</div>
 						</div>
@@ -387,8 +387,8 @@
 					<div class="hot_image">
 						<div class="background_image" style="background-image:url(images/hot.jpg)"></div>
 						<div class="tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-							<div class="tag tag_house"><a href="listings.html">Villa</a></div>
-							<div class="tag tag_sale"><a href="listings.html">for sale</a></div>
+							<div class="tag tag_house"><a href="listings.php">Villa</a></div>
+							<div class="tag tag_sale"><a href="listings.php">for sale</a></div>
 						</div>
 					</div>
 				</div>
@@ -602,8 +602,8 @@
 								</div>
 								<div
 									class="listing_small_tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-									<div class="listing_small_tag tag_house"><a href="listings.html">house</a></div>
-									<div class="listing_small_tag tag_sale"><a href="listings.html">for sale</a></div>
+									<div class="listing_small_tag tag_house"><a href="listings.php">house</a></div>
+									<div class="listing_small_tag tag_sale"><a href="listings.php">for sale</a></div>
 								</div>
 								<div class="listing_small_price">GH¢ 562 346</div>
 							</div>
@@ -652,8 +652,8 @@
 								<ul
 									class="d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
 									<li><a href="index.php">Home</a></li>
-									<li><a href="about.html">About us</a></li>
-									<li><a href="listings.html">Listings</a></li>
+									<li><a href="about.php">About us</a></li>
+									<li><a href="listings.php">Listings</a></li>
 									<li><a href="contact.php">Contact</a></li>
 								</ul>
 							</nav>

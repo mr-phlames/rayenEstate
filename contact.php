@@ -63,8 +63,8 @@
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-start justify-content-start">
 					<li><a href="index.php">Home</a></li>
-					<li ><a href="about.html">About us</a></li>
-					<li><a href="listings.html">Listings</a></li>
+					<li ><a href="about.php">About us</a></li>
+					<li><a href="listings.php">Listings</a></li>
 					<li class="active"><a href="contact.php">Contact</a></li>
 				</ul>
 			</nav>
@@ -109,8 +109,8 @@
                 </ul>
 				<ul>
 					<li><a href="index.php">Home</a></li>
-					<li><a href="about.html">About us</a></li>
-					<li><a href="listings.html">Listings</a></li>
+					<li><a href="about.php">About us</a></li>
+					<li><a href="listings.php">Listings</a></li>
 					<li><a href="contact.php">Contact</a></li>
                 </ul>
                 <br>
@@ -328,8 +328,8 @@
 								</div>
 								<div
 									class="listing_small_tags d-flex flex-row align-items-start justify-content-start flex-wrap">
-									<div class="listing_small_tag tag_house"><a href="listings.html">house</a></div>
-									<div class="listing_small_tag tag_sale"><a href="listings.html">for sale</a></div>
+									<div class="listing_small_tag tag_house"><a href="listings.php">house</a></div>
+									<div class="listing_small_tag tag_sale"><a href="listings.php">for sale</a></div>
 								</div>
 								<div class="listing_small_price">GH¢ 562 346</div>
 							</div>
@@ -376,8 +376,8 @@
 								<ul
 									class="d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
 									<li><a href="index.php">Home</a></li>
-									<li><a href="about.html">About us</a></li>
-									<li><a href="listings.html">Listings</a></li>
+									<li><a href="about.php">About us</a></li>
+									<li><a href="listings.php">Listings</a></li>
 									<li><a href="contact.php">Contact</a></li>
 								</ul>
 							</nav>
