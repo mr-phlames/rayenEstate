@@ -18,7 +18,7 @@
 <body>
     <img src="../images/blog_2.jpg" class="image">
     <div class="form-container">
-        <img src="../images/logo.png" class="logo">
+        <img src="../images/logo.png" class="logo" style="display: none !important;">
         <br>
         <form action="register.php" method="POST" class="form">
             <div class="form-group">

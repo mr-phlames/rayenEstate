@@ -1,3 +1,6 @@
+<?php 
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +13,7 @@
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="styles/single.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
 <link rel="stylesheet" type="text/css" href="styles/single_responsive.css">
 </head>
 <body>
@@ -43,11 +47,9 @@
 			<div class="ml-auto d-flex flex-row align-items-center justify-content-start">
 				<div class="social">
 					<ul class="d-flex flex-row align-items-center justify-content-start">
-						<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-						<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
 					</ul>
 				</div>
 			</div>
@@ -64,8 +66,23 @@
 					<li><a href="contact.php">Contact</a></li>
 				</ul>
 			</nav>
-			<div class="ml-auto"><a href="auth/register.php" style="margin: 0px 40px;">SIGN UP</a></div>
-			<div class="submit ml-auto"><a href="auth/login.php">LOGIN</a></div>
+			<?php 
+				if (isset($_SESSION['id'])) {
+					echo '<div class="ml-auto">
+						<a href="profile.php" style="margin: 0px 40px; display: flex; justify-content: flex-start; align-items: center;" class="nav-profile-link-text">
+							<img src="images/realtor_2.jpg" class="nav-profile-image">
+							'.$_SESSION["username"].'
+						</a>
+					</div>';
+				}  else {
+					echo '
+						<div class="ml-auto">
+							<a href="auth/register.php" style="margin: 0px 40px;">SIGN UP</a>
+						</div>
+						<div class="submit ml-auto"><a href="auth/login.php">LOGIN</a></div>
+					';
+				}
+			?>
 			<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
 		</div>
 	
@@ -76,18 +93,29 @@
 	<div class="menu text-right">
 		<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
 		<div class="menu_log_reg">
-			<div class="log_reg d-flex flex-row align-items-center justify-content-end">
-				<ul class="d-flex flex-row align-items-start justify-content-start">
-					<li><a href="#">Login</a></li>
-				</ul>
-			</div>
 			<nav class="menu_nav">
+                <ul>
+					<?php 
+					echo isset($_SESSION['id']) ? '
+					<li>
+                        <a href="profile.php" style="margin-bottom: 50px; display: flex; justify-content: flex-end; align-items: center;">
+                            <img src="images/realtor_2.jpg" class="nav-profile-image">
+                            <span>'.$_SESSION["username"].'</span>
+                        </a>
+					</li>' : '';
+					?>
+                </ul>
 				<ul>
 					<li><a href="index.php">Home</a></li>
 					<li><a href="about.php">About us</a></li>
 					<li><a href="listings.php">Listings</a></li>
 					<li><a href="contact.php">Contact</a></li>
-				</ul>
+                </ul>
+                <br>
+                <br>
+                <ul>
+                    <li><a href="php/logout.php">Logout</a></li>
+                </ul>
 			</nav>
 		</div>
 	</div>
@@ -350,11 +378,9 @@
 							</div>
 							<div class="social">
 								<ul class="d-flex flex-row align-items-center justify-content-start">
-									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
 								</ul>
 							</div>
 							<div class="footer_submit"><a href="#">submit listing</a></div>
@@ -432,7 +458,7 @@
 							<div class="listing_small_content">
 								<div class="listing_small_location d-flex flex-row align-items-start justify-content-start">
 									<img src="images/icon_1.png" alt="">
-									<a href="single.html">280 Doe Meadow Drive Landover, MD 20785</a>
+									<a href="single.php">280 Doe Meadow Drive Landover, MD 20785</a>
 								</div>
 								<div class="listing_small_info">
 									<ul class="d-flex flex-row align-items-center justify-content-start flex-wrap">
