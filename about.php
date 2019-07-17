@@ -149,7 +149,7 @@
 							<div class="section_title"><h1>Who we are</h1></div>
 						</div>
 						<div class="intro_text">
-							<p>Nulla aliquet bibendum sem, non placerat risus venenatis at. Prae sent vulputate bibendum dictum. Cras at vehicula urna. Suspendisse fringilla lobortis justo, ut tempor leo cursus in. Nulla aliquet bibendum sem, non placerat risus venenatis at. Prae sent vulputate bibendum dictum. Cras at vehicula urna. Suspendisse fringilla lobortis justo, ut tempor leo cursus in.</p>
+							<p>Rayen Real Estate is a real estate company that deals with purchase, sales and renting of lands, houses, offices and other property. We bring to your doorstep the best and most affordable property from all over Ghana. Join Rayen today.</p>
 						</div>
 						<div class="button intro_button"><a href="#">read more</a></div>
 					</div>

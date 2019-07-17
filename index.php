@@ -480,7 +480,7 @@
 								<div class="test_slide">
 									<div class="test_quote">"They helped us find our home"</div>
 									<div class="test_text">
-										<p>Nulla aliquet bibendum sem, non placerat risus venenatis at. Prae sent vulputate bibendum dictum. Cras at vehicula urna. Suspendisse fringilla lobortis justo, ut tempor leo cursus in. Nulla aliquet bibendum sem, non placerat risus venenatis at. Prae sent vulputate bibendum dictum. Cras at vehicula urna. Suspendisse fringilla lobortis justo, ut tempor leo cursus in.</p>
+										<p>We got this hoouse for a very affordable price. In terms of quality, this building is as strong as the day we bought it. For any home services, I recommend Rayen</p>
 									</div>
 									<div class="test_author"><a href="#">Cristinne Smith</a>, Client</div>
 								</div>
@@ -489,7 +489,7 @@
 								<div class="test_slide">
 									<div class="test_quote">"They helped us find our home"</div>
 									<div class="test_text">
-										<p>Nulla aliquet bibendum sem, non placerat risus venenatis at. Prae sent vulputate bibendum dictum. Cras at vehicula urna. Suspendisse fringilla lobortis justo, ut tempor leo cursus in. Nulla aliquet bibendum sem, non placerat risus venenatis at. Prae sent vulputate bibendum dictum. Cras at vehicula urna. Suspendisse fringilla lobortis justo, ut tempor leo cursus in.</p>
+										<p>We got this hoouse for a very affordable price. In terms of quality, this building is as strong as the day we bought it. For any home services, I recommend Rayen</p>
 									</div>
 									<div class="test_author"><a href="#">Cristinne Smith</a>, Client</div>
 								</div>
@@ -498,7 +498,7 @@
 								<div class="test_slide">
 									<div class="test_quote">"They helped us find our home"</div>
 									<div class="test_text">
-										<p>Nulla aliquet bibendum sem, non placerat risus venenatis at. Prae sent vulputate bibendum dictum. Cras at vehicula urna. Suspendisse fringilla lobortis justo, ut tempor leo cursus in. Nulla aliquet bibendum sem, non placerat risus venenatis at. Prae sent vulputate bibendum dictum. Cras at vehicula urna. Suspendisse fringilla lobortis justo, ut tempor leo cursus in.</p>
+										<p>We got this hoouse for a very affordable price. In terms of quality, this building is as strong as the day we bought it. For any home services, I recommend Rayen</p>
 									</div>
 									<div class="test_author"><a href="#">Cristinne Smith</a>, Client</div>
 								</div>

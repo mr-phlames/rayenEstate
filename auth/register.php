@@ -37,7 +37,7 @@
             </div>
             <br>
             <div class="form-group">
-                <input type="password" class="text-input" name="confirm_password" placeholder="Password" value="<?php echo ($errors['username'] || $errors['email'] || $errors['password']) ? $confirm_password : ''; ?>">
+                <input type="password" class="text-input" name="confirm_password" placeholder="Confirm Password" value="<?php echo ($errors['username'] || $errors['email'] || $errors['password']) ? $confirm_password : ''; ?>">
             </div>
             <br>
             <button type="submit" name="register_btn" class="submit_btn">Register</button>
