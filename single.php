@@ -174,8 +174,6 @@
 						$query = "SELECT * FROM listings WHERE id = '$id'";
 						$listing = mysqli_query($connection, $query);
 						$listing = mysqli_fetch_assoc($listing);
-
-						// echo $listing['id'];
 					
 						echo '
 							<div class="listing_image"><img src="images/listing.jpg" alt=""></div>
