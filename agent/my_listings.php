@@ -182,7 +182,11 @@
                                         <div class="card card-bordered">
                                             <img class="card-img-top img-fluid" src="assets/images/card/listing.jpg" alt="image">
                                             <div class="card-body">
-                                                <h5 class="title" style="font-weight: bolder;">'.$listing['name'].'</h5>
+                                                <h5 class="title" style="font-weight: bolder;">
+                                                    <a href="listing.php?id='.$listing['id'].'" style="color: #222">
+                                                        '.$listing['name'].'
+                                                    </a>
+                                                </h5>
                                                 <p class="card-text">'.$listing['description'].'</p>
                                                 <p>
                                                     <b>Property Details</b><br>

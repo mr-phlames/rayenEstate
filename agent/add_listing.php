@@ -177,7 +177,7 @@
                             <div class="col-12 mt-5">
                                 <div class="card">
                                     <div class="card-body">
-                                        <form action="add_listing.php" method="POST">
+                                        <form action="add_listing.php" method="POST" enctype="multipart/form-data">
                                             <h4 class="header-title">Property Info</h4>
                                             <p class="text-muted font-14 mb-4">Fill this form to create a new listing.
                                             </p>
@@ -239,7 +239,7 @@
                                             <br>
                                             <div class="input-group mb-3">
                                                 <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="property_image">
+                                                    <input type="file" class="custom-file-input" id="property_image" name="property_image">
                                                     <label class="custom-file-label" for="property_image">Property
                                                         Image</label>
                                                 </div>
