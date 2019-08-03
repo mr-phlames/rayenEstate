@@ -14,9 +14,17 @@
         $property_dimensions = mysqli_real_escape_string($connection, $_POST['property_dimensions']);
         $sell_status = mysqli_real_escape_string($connection, $_POST['sell_status']);
         $description = mysqli_real_escape_string($connection, $_POST['description']);
-        $image = mysqli_real_escape_string($connection, $_POST['image']);
 
-        $query = "INSERT INTO listings(price, name, email, display_email, telephone, location, bedrooms, bathrooms, land_dimensions, property_dimensions, sell_status, description) VALUES('$price', '$name', '$email', '$display_email', '$telephone', '$location', '$bedrooms', '$bathrooms', '$land_dimensions', '$property_dimensions', '$sell_status', '$description')";
+        $image_name = $_FILES["property_image"]["name"].session_id();
+        $image = $_FILES["property_image"]["tmp_name"];
+        $folder="uploads/";
+        if(move_uploaded_file($image, "./uploads/".basename($image_name))) {
+            echo '<div style="width: 100%; height: 300px !important;">alert("Image uploaded");</div>';
+        } else {
+            echo '<div style="width: 100%; height: 300px !important;">alert("Image upload failed");</div>';
+        }
+
+        $query = "INSERT INTO listings(price, name, email, display_email, telephone, location, bedrooms, bathrooms, land_dimensions, property_dimensions, sell_status, description, img_name) VALUES('$price', '$name', '$email', '$display_email', '$telephone', '$location', '$bedrooms', '$bathrooms', '$land_dimensions', '$property_dimensions', '$sell_status', '$description', '$image_name')";
         mysqli_query($connection, $query);
 
         header('location: my_listings.php');

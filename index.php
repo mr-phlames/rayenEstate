@@ -84,7 +84,7 @@
 			 				<div class="row">
 			 					<div class="col">
 			 						<div class="home_content" style="text-align: left !important;">
-			 							<div class="home_title"><h1>Rayen Real Estate</h1></div>
+			 							<div class="home_title"><h1 style="font-size: 28px;">Online Real Estate Marketplace</h1></div>
 			 							<div class="home_title"><h4 style="color: white;">We're here to help you buy, sell and rent</h4></div>
 			 						</div>
 			 					</div>

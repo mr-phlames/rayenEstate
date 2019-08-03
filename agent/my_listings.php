@@ -180,7 +180,7 @@
                                     echo '
                                     <div class="col-lg-4 col-md-6 mt-5">
                                         <div class="card card-bordered">
-                                            <img class="card-img-top img-fluid" src="assets/images/card/listing.jpg" alt="image">
+                                            <img class="card-img-top img-fluid" src="uploads/'.$listing['img_name'].'" alt="image">
                                             <div class="card-body">
                                                 <h5 class="title" style="font-weight: bolder;">
                                                     <a href="listing.php?id='.$listing['id'].'" style="color: #222">

@@ -220,7 +220,7 @@
 											<div class="listing">
 												<div class="listing_image">
 													<div class="listing_image_container">
-														<img src="images/listing_7.jpg" alt="">
+														<img src="agent/uploads/'.$listing['img_name'].'" alt="">
 													</div>
 													<div class="tags d-flex flex-row align-items-start justify-content-start flex-wrap">
 														<div class="tag tag_house">

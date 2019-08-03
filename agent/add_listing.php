@@ -239,7 +239,7 @@
                                             <br>
                                             <div class="input-group mb-3">
                                                 <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="property_image" name="property_image">
+                                                    <input type="file" id="property_image" name="property_image">
                                                     <label class="custom-file-label" for="property_image">Property
                                                         Image</label>
                                                 </div>

@@ -10,6 +10,7 @@
     $listing = mysqli_query($connection, $query);
     $listing = mysqli_fetch_assoc($listing);
 
+    echo '<img src="uploads/'.$listing['img_name'].'"></center>';
     echo '<center>'.$listing['name'].'</center>';
     echo '<center>'.$listing['description'].'</center>';
     echo '<center>GH¢ '.$listing['price'].'</center>';

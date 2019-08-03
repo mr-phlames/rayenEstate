@@ -176,7 +176,7 @@
 						$listing = mysqli_fetch_assoc($listing);
 					
 						echo '
-							<div class="listing_image"><img src="images/listing.jpg" alt=""></div>
+							<div class="listing_image"><img src="agent/uploads/'.$listing['img_name'].'" alt=""></div>
 
 								<!--
 								<div class="listing_tabs d-flex flex-row align-items-start justify-content-between flex-wrap">
