@@ -1,9 +1,6 @@
 <?php 
 	require "php/connection.php";
 	session_start();
-	if (!isset($_GET['id'])) {
-		header('location: listings.php');
-	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -304,7 +301,7 @@
 											</div>
 										</div>
 										<div class="col-lg-6">
-											<div class="listing_image"><img src="agent/uploads/'.$listing['img_name'].'" alt="Property Picture"></div>
+											<div class="listing_image"><img src="agent/uploads/'.$listing['img_name'].'" alt=""></div>
 											<div class="about_text">
 												<p>'.$listing["description"].'</p>
 											</div>
