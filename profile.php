@@ -63,13 +63,13 @@
 				<ul class="d-flex flex-row align-items-start justify-content-start">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="about.php">About us</a></li>
-					<li class="active"><a href="listings.php">Listings</a></li>
+					<li><a href="listings.php">Listings</a></li>
 					<li><a href="contact.php">Contact</a></li>
 				</ul>
 			</nav>
 			<?php 
 				if (isset($_SESSION['id'])) {
-					echo '<div class="ml-auto">
+					echo '<div class="ml-auto active">
 						<a href="profile.php" style="margin: 0px 40px; display: flex; justify-content: flex-start; align-items: center;" class="nav-profile-link-text">
 							<img src="images/realtor_2.jpg" class="nav-profile-image">
 							'.$_SESSION["username"].'
@@ -129,235 +129,40 @@
 			<div class="row">
 				<div class="col">
 					<div class="home_content text-center">
-						<div class="home_title">Listings</div>
+						<div class="home_title">Profile</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- Search -->
-
-	<div class="search">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="search_container">
-						<div class="search_form_container">
-							<form action="#" class="search_form" id="search_form">
-								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
-									<div class="search_inputs d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
-										<input type="text" class="search_input" placeholder="Property type" required="required">
-										<input type="text" class="search_input" placeholder="No rooms" required="required">
-										<input type="text" class="search_input" placeholder="Location" required="required">
-									</div>
-									<button class="search_button">Search</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Listing -->
+	<!-- user -->
 
 	<div class="listing_container">
 		<div class="container">
 			<div class="row">
 				<div class="col">
 					<?php 
-						$id = $_GET['id'];
-						$query = "SELECT * FROM listings WHERE id = '$id'";
-						$listing = mysqli_query($connection, $query);
-						$listing = mysqli_fetch_assoc($listing);
+						$email = $_SESSION['email'];
+						$query = "SELECT * FROM users WHERE id = 'mickdd22@gmail.com'";
+						$profile = mysqli_query($connection, $query);
+						$profile = mysqli_fetch_assoc($profile);
 					
-						echo '
-							
-
-								<!--
-								<div class="listing_tabs d-flex flex-row align-items-start justify-content-between flex-wrap">
-
-									
-									<div class="tab">
-										<input type="radio" id="tab_1" name="listing_tabs" checked>
-										<label for="tab_1"></label>
-										<div class="tab_content d-flex flex-xl-row flex-column align-items-center justify-content-center">
-											<div class="tab_icon"><img src="images/house.svg" class="svg" alt=""></div>
-											<span>open house</span>
-										</div>
-									</div>
-
-									
-									<div class="tab">
-										<input type="radio" id="tab_2" name="listing_tabs">
-										<label for="tab_2"></label>
-										<div class="tab_content d-flex flex-xl-row flex-column align-items-center justify-content-center">
-											<div class="tab_icon"><img src="images/houses.svg" class="svg" alt=""></div>
-											<span>features</span>
-										</div>
-									</div>
-
-									
-									<div class="tab">
-										<input type="radio" id="tab_3" name="listing_tabs">
-										<label for="tab_3"></label>
-										<div class="tab_content d-flex flex-xl-row flex-column align-items-center justify-content-center">
-											<div class="tab_icon"><img src="images/house2.svg" class="svg" alt=""></div>
-											<span>photos</span>
-										</div>
-									</div>
-
-									
-									<div class="tab">
-										<input type="radio" id="tab_4" name="listing_tabs">
-										<label for="tab_4"></label>
-										<div class="tab_content d-flex flex-xl-row flex-column align-items-center justify-content-center">
-											<div class="tab_icon"><img src="images/camera.svg" class="svg" alt=""></div>
-											<span>video</span>
-										</div>
-									</div>
-
-									
-									<div class="tab">
-										<input type="radio" id="tab_5" name="listing_tabs">
-										<label for="tab_5"></label>
-										<div class="tab_content d-flex flex-xl-row flex-column align-items-center justify-content-center">
-											<div class="tab_icon"><img src="images/directions.svg" class="svg" alt=""></div>
-											<span>nearby amenities</span>
-										</div>
-									</div>
-
-									
-									<div class="tab">
-										<input type="radio" id="tab_6" name="listing_tabs">
-										<label for="tab_6"></label>
-										<div class="tab_content d-flex flex-xl-row flex-column align-items-center justify-content-center">
-											<div class="tab_icon"><img src="images/location.svg" class="svg" alt=""></div>
-											<span>location</span>
-										</div>
-									</div>
-
-									
-									<div class="tab">
-										<input type="radio" id="tab_7" name="listing_tabs">
-										<label for="tab_7"></label>
-										<div class="tab_content d-flex flex-xl-row flex-column align-items-center justify-content-center">
-											<div class="tab_icon"><img src="images/contract.svg" class="svg" alt=""></div>
-											<span>contact</span>
-										</div>
-									</div>
-
-								</div>-->
-
-								<!-- About -->
-								<div class="about">
-									<div class="row">
-										<div class="col-lg-6">
-											<div class="property_info">
-												<div class="tag_price listing_price">GH¢ '.$listing['price'].'</div>
-												<div class="listing_name"><h1>'.$listing["name"].'</h1></div>
-												<div class="listing_location d-flex flex-row align-items-start justify-content-start">
-													<img src="images/icon_1.png" alt="">
-													<span>'.$listing["location"].'</span>
-												</div>
-												<div class="listing_list">
-													<ul>
-														<li>Property ID: 643682</li>
-														<li>Posted on: '.$listing["created_at"].'</li>
-														<li>Verified: '.$listing["verified"].'</li>
-													</ul>
-												</div>
-												<div class="prop_agent d-flex flex-row align-items-center justify-content-start">
-													<div class="prop_agent_image"><img src="images/agent_1.jpg" alt=""></div>
-													<div class="prop_agent_name"><a href="#">'.$listing["email"].',</a> Agent</div>
-												</div>
-												<div class="prop_info">
-													<ul class="d-flex flex-row align-items-center justify-content-start flex-wrap">
-														<li class="d-flex flex-row align-items-center justify-content-start">
-															<img src="images/icon_2_large.png" alt="">
-															<div>
-																<div>'.$listing["property_dimensions"].'</div>
-																<div>meters</div>
-															</div>
-														</li>
-														<li class="d-flex flex-row align-items-center justify-content-start">
-															<img src="images/icon_3_large.png" alt="">
-															<div>
-																<div>'.$listing["bathrooms"].'</div>
-																<div>baths</div>
-															</div>
-														</li>
-														<li class="d-flex flex-row align-items-center justify-content-start">
-															<img src="images/icon_4_large.png" alt="">
-															<div>
-																<div>'.$listing["bedrooms"].'</div>
-																<div>beds</div>
-															</div>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="listing_image"><img src="agent/uploads/'.$listing['img_name'].'" alt=""></div>
-											<div class="about_text">
-												<p>'.$listing["description"].'</p>
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="listing_features">
-												<div class="listing_title"><h3>Features</h3></div>
-												<div class="row">
-													<div class="col-lg-6">
-														<ul>
-															<li>2 car garages</li>
-															<li>3 bedrooms</li>
-															<li>heated floors</li>
-															<li>contemporary architecture</li>
-															<li>swimming pool</li>
-															<li>exercise room</li>
-															<li>formal entry</li>
-														</ul>
-													</div>
-													<div class="col-lg-6">
-														<ul>
-															<li>patio</li>
-															<li>close to stores</li>
-															<li>ocean view</li>
-															<li>spa</li>
-															<li>sprinklers</li>
-															<li>garden</li>
-															<li>alley</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="listing_video">
-												<div class="listing_title"><h3>Video</h3></div>
-												<div class="video_container d-flex flex-column align-items-center justify-content-center">
-													<img src="images/video.jpg" alt="">
-													<div class="video_button"><a class="youtube" href="https://www.youtube.com/embed/IV3ueyrp5M4?autoplay=1"><i class="fa fa-play" aria-hidden="true"></i></a></div>
-												</div>
-											</div>
-										</div>
-									</div>		
-								</div>
-						';
+                        echo '
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <img src="images/realtor_2.jpg" class="nav-profile-image">
+                                </div>
+                                <div class="col-lg-6">
+                                    '.$_SESSION['username'].'<br>
+                                    '.$_SESSION['email'].'<br>
+                                    '.$_SESSION['country'].'
+                                </div>
+                            </div>
+                        ';
 					
 					?>
-					<div class="google_map_container">
-						<div class="map">
-							<div id="google_map" class="google_map">
-								<div class="map_container">
-									<div id="map"></div>
-								</div>
-							</div>
-						</div>
-					</div>
+                    <a href="php/logout.php">Logout</a>
 				</div>
 			</div>
 		</div>
