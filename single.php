@@ -167,8 +167,6 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-
-					<!-- Image -->
 					<?php 
 						$id = $_GET['id'];
 						$query = "SELECT * FROM listings WHERE id = '$id'";
@@ -176,7 +174,7 @@
 						$listing = mysqli_fetch_assoc($listing);
 					
 						echo '
-							<div class="listing_image"><img src="agent/uploads/'.$listing['img_name'].'" alt=""></div>
+							
 
 								<!--
 								<div class="listing_tabs d-flex flex-row align-items-start justify-content-between flex-wrap">
@@ -303,6 +301,7 @@
 											</div>
 										</div>
 										<div class="col-lg-6">
+											<div class="listing_image"><img src="agent/uploads/'.$listing['img_name'].'" alt=""></div>
 											<div class="about_text">
 												<p>'.$listing["description"].'</p>
 											</div>

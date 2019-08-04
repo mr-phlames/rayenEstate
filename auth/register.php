@@ -13,12 +13,99 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Rayen Real Estate">
     <title>Register</title>
-    <link rel="stylesheet" href="auth.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="auth.css">
+    <style>
+        /* * {
+    border:  2px solid red;
+} */
+
+        body {
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+            height: 100vh !important;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .side-image {
+            width: 50% !important;
+            height: 100% !important;
+        }
+
+        .form-container {
+            width: 50% !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+
+        .logo {
+            width: 150px;
+            height: 100px;
+        }
+
+        .form {
+            width: 60% !important;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .text-input {
+            width: 97% !important;
+            padding: 10px 0px 10px 10px;
+            border: 1px solid #777777 !important;
+            border-radius: 3px;
+        }
+
+        .form-error {
+            text-align: left !important;
+        }
+
+        .submit_btn {
+            width: 100%;
+            background: #36a;
+            border: 1px solid;
+            border-color: #36a !important;
+            border-radius: 3px;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .submit_btn:focus {
+            background: #6ad;
+            border-color: #6ad;
+        }
+
+        .link_to {
+            text-decoration: none;
+            margin-top: 7%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+        }
+
+
+        @media only screen and (max-width: 500px) {
+            .side-image {
+                display: none !important;
+                width: 0px !important;
+            }
+
+            .form-container {
+                width: 100% !important;
+            }
+        }
+    </style>
 </head>
 <body>
-    <img src="../images/blog_2.jpg" class="image">
+    <img src="../images/blog_2.jpg" class="side-image">
     <div class="form-container">
-        <img src="../images/logo.png" class="logo" style="display: none !important;">
+        <img src="../images/logo.png" class="logo">
         <br>
         <form action="register.php" method="POST" class="form">
             <div class="form-group">

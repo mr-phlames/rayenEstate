@@ -11,7 +11,7 @@ body {
     flex-direction: row;
 }
 
-.image {
+.side-image {
     width: 50% !important;
     height: 100% !important;
 }
@@ -70,4 +70,12 @@ body {
     text-decoration: none;
     margin-top: 7%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+
+
+@media only screen and (min-width: 500px) {
+    .side-image {
+        display: none !important;
+        width: 0px !important;
+    }
 }
